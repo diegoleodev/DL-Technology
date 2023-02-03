@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2? family= Poppins:ital,wght@0,200;0,300;1,400;1,500 & display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navBar{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+.navBar .nav-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBar .nav-logo h2{
+    color: aliceblue;
+}
+.navBar .nav-links {
+    
+}
+.navBar .nav-links ol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.navBar .nav-links li{
+    list-style: none;
+    
+}
+.navBar .nav-links li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.navBar02{
+    display: none;
+}
+.nav-links02{
+    display: none;
+    
+}
+
+.btn{
+    display: none;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.btn .bi-list{
+    color: white;
+    font-size: 28px;
+    display: flex;
+
+}
+
+.btn .line{
+    width: 28px;
+    height: 2px;
+    background-color: aliceblue;
+    margin: 8px;
+    transition: 0.5s ease-in;
+}
+
+@media screen and (max-width: 850px) {
+    .navBar .nav-links{
+        display: none;
+    }
+    .navBar02{
+        width: 80vw;
+        height: 80vh;
+        right: -80vw;
+        background-color: black;
+        display: block;
+        transition: 0.6s ease-in-out;
+        float: right;
+        position: fixed;
+        border-radius: 0px 0px 0px 50px;
+    }
+
+    .navBar02-active{
+        right: 0;
+    }
+
+    .btn{
+        display: block;
+    }
+
+    .nav-links02{
+        width: 100%;
+        display: block;
+        padding: 20px;
+    }
+    
+    .nav-links02 ol{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+    }
+    
+    .nav-links02 li{
+        color: aliceblue;
+        list-style: none;
+
+    }
+    
+    .nav-links02 a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: 300;
+    }
+
+    .btn-active #line01{
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+    .btn-active #line-some{
+        opacity: 0;
+    }
+    .btn-active #line02{
+        transform: rotate(45deg)translate(-8px, -9px);
+    }
+}
